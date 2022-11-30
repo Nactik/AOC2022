@@ -1,2 +1,6 @@
 with open('input.txt', "r") as f:
-    # Do something here 
+    # Do something here
+    content = f.readlines()
+
+
+
