@@ -4,14 +4,16 @@ with open('input.txt', "r") as f:
     inventory = []
 
     elf_id = 0
-    sum = 0
+    calories = 0
 
     for line in content :
         if line == "":
-            inventory.append(sum)
-            sum=0
+            inventory.append(calories)
+            calories=0
             elf_id += 1
         else:
-            sum += int(line)
+            calories += int(line)
+
+    inventory.append(calories) ## Append last count
 
     print(max(inventory))
