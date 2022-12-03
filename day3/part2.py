@@ -17,10 +17,8 @@ with open("input.txt", "r") as f:
             for letter in items1
             if (letter in items2 and letter in items3)
         ][0]
-        priority = priority = (
-            ord(common) - 96 if common.islower() else ord(common) - 38
-        )
 
+        priority = ord(common) - 96 if common.islower() else ord(common) - 38
         total += priority
 
     print(f"Total : {total}")
