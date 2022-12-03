@@ -12,10 +12,8 @@ with open("input.txt", "r") as f:
     for items1, items2 in items:
         # Find common letter
         common = [letter for letter in items1 if letter in items2][0]
-        priority = priority = (
-            ord(common) - 96 if common.islower() else ord(common) - 38
-        )
 
+        priority = ord(common) - 96 if common.islower() else ord(common) - 38
         total += priority
 
     print(f"Total : {total}")
