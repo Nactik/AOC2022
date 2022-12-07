@@ -1,5 +1,6 @@
 import re
 
+
 with open("input.txt", "r") as f:
 
     header, content = f.read().split("\n\n")
