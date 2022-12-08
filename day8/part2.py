@@ -19,32 +19,25 @@ for x, line in enumerate(map):
         # For each direction, we count the number of trees until we find a
         # blocking one
         scenic_up, scenic_down, scenic_left, scenic_right = 0, 0, 0, 0
+
         for i in up[::-1]:
-            if i < tree:
-                scenic_up += 1
-            else:
-                scenic_up += 1
+            scenic_up += 1
+            if i >= tree:
                 break
 
         for i in down:
-            if i < tree:
-                scenic_down += 1
-            else:
-                scenic_down += 1
+            scenic_down += 1
+            if i >= tree:
                 break
 
         for i in left[::-1]:
-            if i < tree:
-                scenic_left += 1
-            else:
-                scenic_left += 1
+            scenic_left += 1
+            if i >= tree:
                 break
 
         for i in right:
-            if i < tree:
-                scenic_right += 1
-            else:
-                scenic_right += 1
+            scenic_right += 1
+            if i >= tree:
                 break
 
         scenic = scenic_up * scenic_down * scenic_left * scenic_right
