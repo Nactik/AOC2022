@@ -20,8 +20,6 @@ instruction = [line.split(" ") for line in content]
 visited_positions = set()  # We start at (0, 0), alwaty visited
 H = (0, 0)
 T = [(0, 0)] * 9
-distance = 0
-
 
 for dir, count in instruction:
     count = int(count)

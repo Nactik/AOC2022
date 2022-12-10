@@ -1,15 +1,15 @@
-# def _debug_print_map(H, T):
-#     map = [["." for x in range(0, 6)] for y in range(0, 6)]
-#     map[H[0]][H[1]] = "H"
-#     map[T[0]][T[1]] = "T"
+def _debug_print_map(H, T):
+    map = [["." for x in range(0, 6)] for y in range(0, 6)]
+    map[H[0]][H[1]] = "H"
+    map[T[0]][T[1]] = "T"
 
-#     for line in map:
-#         print(line)
+    for line in map:
+        print(line)
 
-#     print("\n")
+    print("\n")
 
 
-with open("input.txt", "r") as f:
+with open("test.txt", "r") as f:
     content = f.read().splitlines()
 
 instruction = [line.split(" ") for line in content]
@@ -17,7 +17,6 @@ instruction = [line.split(" ") for line in content]
 visited_positions = set()  # We start at (0, 0), alwaty visited
 H = (0, 0)
 T = (0, 0)
-distance = 0
 
 for dir, count in instruction:
     count = int(count)
@@ -52,7 +51,7 @@ for dir, count in instruction:
                 # They are on the same line, we need to update T
                 T = (H[0], T[1])
 
-        # _debug_print_map(H, T)
+        _debug_print_map(H, T)
         visited_positions.add((T[0], T[1]))
 
 print(len(visited_positions))
